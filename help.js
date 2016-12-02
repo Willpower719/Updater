@@ -11,6 +11,10 @@ function setMessage(text) {
     $("#message").text(text);
 }
 
+$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+  console.log(JSON.stringify(data, null, 2));
+});
+
 dew.on("show", function (event) {
     switch (event.screen) {
         case "browser":
