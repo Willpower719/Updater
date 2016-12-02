@@ -3,10 +3,10 @@ $(function() {
        var key = e.which;
        if (key == 27){
            dew.hide();
-            };
-       } else if (key ==96){
+        
+	   } else if (key ==96){
             dew.show("console");
-       }
+	   }		
    });
 });
 
