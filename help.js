@@ -1,7 +1,7 @@
- var code = e.keyCode || e.which;
- if(code == 13) { //Enter keycode
-    dewRcon.send('Game.SetMenuEnabled 0');//Do something
- }
+$(document).keydown(function (e) {
+    // Hide when a key is pressed
+    dew.hide();
+});
 
 function setTitle(text) {
     $("#title").text(text);
