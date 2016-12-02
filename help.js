@@ -1,19 +1,21 @@
-$(function() {
-   $(window).keypress(function(e) {
-       var key = e.which;
-       if (key == 27){
-            $( ".genericLoader" ).fadeOut( 500, function() {
-                      dewRcon.send('Game.SetMenuEnabled 0');
-            });
-       } else if (key ==96){
-            dew.show("console");
-       }
-   });
+$(document).keydown(function (e) {
+    // Hide when a key is pressed
+    dew.hide();
 });
+
+function setTitle(text) {
+    $("#title").text(text);
+}
+
+function setMessage(text) {
+    $("#message").text(text);
+}
 
 dew.on("show", function (event) {
     switch (event.screen) {
         case "browser":
+            setTitle("Failed to load the server browser!");
+            setMessage("Check your internet connection and make sure that Game.MenuURL points to a valid URL.");
             break;
         default:
             dew.hide();
