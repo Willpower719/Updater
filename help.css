@@ -19,6 +19,9 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+	float:center;
+	overflow-y: auto;
+
 }
 
 h1 {
